@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NestJS Starter Project</title>
+    <title>NestJS Starter Kit</title>
     <link rel="stylesheet" href="A2.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
 </head>
@@ -37,8 +37,9 @@
 
         <section class="full">
             <h1 style="font-weight: bold;">Unleash Your Creativity with the NestJS Starter Kit</h1>
-            <h2>Accelerate Your Development with Tailored Tools and Resources</h2>
+            <h2>Transform Your Development Workflow with the NestJS Starter Kit</h2>
             <hr>
+            
             <section id="introduction">
                 <h3>Introduction</h3>
                 <p>The software development landscape is evolving rapidly, with developers seeking efficient ways to launch applications without compromising on quality. The NestJS Starter Kit is a meticulously crafted boilerplate designed to provide a robust starting point for your NestJS projects. This article explores the NestJS Starter Kit in detail, highlighting its core features, implementation strategies, and the numerous advantages it offers to developers.</p>
@@ -51,14 +52,54 @@
             
             <section id="features">
                 <h3>Core Features</h3>
+                
                 <h4>Super Admin</h4>
                 <p>The Super Admin module is a pivotal component of the NestJS Starter Kit. It provides administrators with a comprehensive dashboard to manage users, products, and settings. This centralized control system simplifies the management of complex applications, allowing for efficient oversight and configuration.</p>
+                <p>Example code for the Super Admin dashboard:</p>
+                <pre>
+&lt;div class="super-admin-dashboard"&gt;
+    &lt;h2&gt;Admin Dashboard&lt;/h2&gt;
+    &lt;button (click)="manageUsers()"&gt;Manage Users&lt;/button&gt;
+    &lt;button (click)="manageProducts()"&gt;Manage Products&lt;/button&gt;
+    &lt;button (click)="manageSettings()"&gt;Manage Settings&lt;/button&gt;
+&lt;/div&gt;
+                </pre>
                 
                 <h4>Email Templates</h4>
                 <p>Effective communication is crucial for any application. The NestJS Starter Kit includes a suite of email templates such as welcome emails, password reset emails, and newsletter templates. These templates are fully customizable, ensuring they align with your brand and user engagement strategies.</p>
+                <p>Example code for an email template:</p>
+                <pre>
+&lt;template&gt;
+    &lt;html&gt;
+        &lt;body&gt;
+            &lt;p&gt;Hello &lt;span>{{user.name}}&lt;/span&gt;,&lt;/p&gt;
+            &lt;p&gt;Welcome to our application! Please click the link below to verify your email address:&lt;/p&gt;
+            &lt;a href="{{verificationLink}}"&gt;Verify Email&lt;/a&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+&lt;/template&gt;
+                </pre>
                 
                 <h4>Settings and Configuration</h4>
                 <p>The settings module in the NestJS Starter Kit offers extensive customization options. Users can manage their profile settings, configure passwords, and adjust language and regional settings. Administrators can also set up roles, permissions, and data privacy configurations, providing a secure and tailored user experience.</p>
+                <p>Example code for a settings form:</p>
+                <pre>
+&lt;form class="settings-form"&gt;
+    &lt;label for="profile-name"&gt;Profile Name&lt;/label&gt;
+    &lt;input type="text" id="profile-name" name="profile-name" value="current-profile-name"&gt;
+    
+    &lt;label for="password"&gt;Change Password&lt;/label&gt;
+    &lt;input type="password" id="password" name="password"&gt;
+    
+    &lt;label for="region"&gt;Region&lt;/label&gt;
+    &lt;select id="region" name="region"&gt;
+        &lt;option value="us"&gt;United States&lt;/option&gt;
+        &lt;option value="eu"&gt;Europe&lt;/option&gt;
+    &lt;/select&gt;
+    
+    &lt;button type="submit"&gt;Save Changes&lt;/button&gt;
+&lt;/form&gt;
+                </pre>
             </section>
             
             <section id="getting-started">
@@ -66,16 +107,40 @@
                 <h4>Integration Guide</h4>
                 <ol>
                     <li>
-                        Installation: Start by cloning the NestJS Starter Kit repository and installing the dependencies using npm install.
+                        Installation: Start by cloning the NestJS Starter Kit repository and installing the dependencies using <code>npm install</code>.
+                        <pre>
+&lt;code&gt;git clone https://github.com/your-repo/nestjs-starter-kit.git&lt;/code&gt;
+                        </pre>
                     </li>
                     <li>
                         Configuration: Set up your environment variables, including database connections and SMTP settings for email templates.
+                        <pre>
+&lt;code&gt;DATABASE_URL=your-database-url
+SMTP_SERVER=your-smtp-server
+SMTP_USER=your-smtp-user
+SMTP_PASSWORD=your-smtp-password&lt;/code&gt;
+                        </pre>
                     </li>
                     <li>
-                        Configure Environment Variables: Set up your environment variables, including database connections and API keys.
+                        Customization: Customize the email templates and settings according to your application’s requirements.
+                        <pre>
+&lt;code&gt;<!-- Customize email template -->
+&lt;template&gt;
+    &lt;html&gt;
+        &lt;body&gt;
+            &lt;p&gt;Hello &lt;span>{{user.name}}&lt;/span&gt;,&lt;/p&gt;
+            &lt;p&gt;Your account has been created successfully!&lt;/p&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+&lt;/template&gt;
+&lt;/code&gt;
+                        </pre>
                     </li>
                     <li>
-                        Deployment: Use npm run build to compile the project and deploy it on your preferred hosting service.</p>
+                        Deployment: Use <code>npm run build</code> to compile the project and deploy it on your preferred hosting service.
+                        <pre>
+&lt;code&gt;npm run build&lt;/code&gt;
+                        </pre>
                     </li>
                 </ol>
             </section>
@@ -83,15 +148,9 @@
             <section id="use-cases">
                 <h3>Best Practices</h3>
                 <ul>
-                    <li>
-                        Modularization: Keep your application modular by separating features into distinct modules.
-                    </li>
-                    <li>
-                        Security: Regularly update dependencies and use secure coding practices to safeguard your application.
-                    </li>
-                    <li>
-                        Testing: Implement automated tests to ensure the reliability and stability of your application.
-                    </li>
+                    <li>Modularization: Keep your application modular by separating features into distinct modules.</li>
+                    <li>Security: Regularly update dependencies and use secure coding practices to safeguard your application.</li>
+                    <li>Testing: Implement automated tests to ensure the reliability and stability of your application.</li>
                 </ul>
             </section>
             
